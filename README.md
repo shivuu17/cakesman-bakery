@@ -1,303 +1,70 @@
-# 🧁 Cakesman Bakery - E-Commerce Platform
+# Getting Started with Create React App
 
-A modern, full-stack e-commerce platform for an online bakery built with React, Node.js, Express, and MongoDB.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## 🌐 Live Demo
+## Available Scripts
 
-- **Frontend**: [https://cakesman-bakery.vercel.app](https://cakesman-bakery.vercel.app)
-- **Admin Panel**: [https://cakesman-bakery.vercel.app/admin](https://cakesman-bakery.vercel.app/admin)
+In the project directory, you can run:
 
-### Demo Credentials
-- **Admin Email**: `admin@cakesman.com`
-- **Admin Password**: `admin123`
+### `npm start`
 
-## 🎯 Features
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Customer Features
-- 🏠 **Beautiful Homepage** with hero section, categories, and bestsellers
-- 🛍️ **Product Catalog** with filtering by categories and subcategories
-- 🛒 **Shopping Cart** with persistent storage
-- 💳 **Checkout Process** with delivery options
-- 👤 **Customer Authentication** (Login/Register)
-- ⭐ **Product Reviews and Ratings**
-- 📱 **Fully Responsive Design** - Mobile, tablet, and desktop
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### Admin Features
-- 📊 **Admin Dashboard** with statistics and analytics
-- 📦 **Product Management** (Create, Read, Update, Delete)
-- 📋 **Order Management** - View and track orders
-- 👥 **Customer Management**
-- 📈 **Sales Analytics** and insights
+### `npm test`
 
-## 🛠️ Tech Stack
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Frontend
-- **React 18.3.1** - UI library
-- **React Router v6** - Client-side routing
-- **Tailwind CSS** - Styling
-- **Axios** - HTTP client
-- **Sonner** - Toast notifications
-- **Lucide React** - Icons
-- **Context API** - State management
+### `npm run build`
 
-### Backend
-- **Node.js** - Runtime
-- **Express.js** - Web framework
-- **MongoDB** - Database
-- **Mongoose** - ODM
-- **JWT** - Authentication
-- **bcryptjs** - Password hashing
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## 📁 Project Structure
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```
-Cakesman-Bakery/
-├── frontend/                 # React application
-│   ├── src/
-│   │   ├── components/      # Reusable components
-│   │   ├── pages/           # Page components
-│   │   ├── context/         # Context API
-│   │   ├── data/            # Constants and data
-│   │   ├── utils/           # Utility functions
-│   │   └── App.jsx          # Main app component
-│   └── package.json
-│
-└── backend/                  # Node.js server
-    ├── controllers/         # Route handlers
-    ├── models/             # MongoDB schemas
-    ├── routes/             # API routes
-    ├── middleware/         # Custom middleware
-    ├── config/             # Configuration files
-    ├── server.js           # Entry point
-    └── package.json
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## 🚀 Getting Started
+### `npm run eject`
 
-### Prerequisites
-- Node.js v16+
-- npm or yarn
-- MongoDB (local or Atlas)
-- Git
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-### Installation
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/cakesman-bakery.git
-cd Cakesman-Bakery
-```
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-2. **Setup Backend**
-```bash
-cd backend
-npm install
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-# Create .env file
-echo "MONGODB_URI=your_mongodb_uri
-PORT=5001
-JWT_SECRET=your_jwt_secret" > .env
+## Learn More
 
-npm start
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Backend will run on `http://localhost:5001`
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-3. **Setup Frontend**
-```bash
-cd frontend
-npm install
+### Code Splitting
 
-npm start
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Frontend will run on `http://localhost:3000`
+### Analyzing the Bundle Size
 
-## 📊 Database Schema
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Users Collection
-```javascript
-{
-  _id: ObjectId,
-  email: String (unique),
-  password: String (hashed),
-  fullName: String,
-  phone: String,
-  address: String,
-  role: String ('customer' or 'admin'),
-  createdAt: Date
-}
-```
+### Making a Progressive Web App
 
-### Products Collection
-```javascript
-{
-  _id: ObjectId,
-  name: String,
-  description: String,
-  basePrice: Number,
-  categoryId: String,
-  subcategoryId: String,
-  image: String,
-  inStock: Boolean,
-  featured: Boolean,
-  discount: Number,
-  rating: Number,
-  reviews: Number,
-  deliveryTime: String,
-  tags: [String],
-  createdAt: Date,
-  updatedAt: Date
-}
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Orders Collection
-```javascript
-{
-  _id: ObjectId,
-  customerId: ObjectId (ref: User),
-  totalAmount: Number,
-  status: String ('pending', 'confirmed', 'preparing', 'delivered'),
-  paymentStatus: String ('pending', 'completed', 'failed'),
-  items: [
-    {
-      productId: ObjectId,
-      name: String,
-      flavor: String,
-      size: String,
-      quantity: Number,
-      price: Number
-    }
-  ],
-  deliveryAddress: String,
-  deliveryDate: Date,
-  specialInstructions: String,
-  createdAt: Date,
-  updatedAt: Date
-}
-```
+### Advanced Configuration
 
-## 🔐 Authentication
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-The project uses JWT (JSON Web Tokens) for authentication:
+### Deployment
 
-- **Customer Login**: Email + Password
-- **Admin Login**: Demo credentials (admin@cakesman.com / admin123)
-- **Protected Routes**: Admin dashboard requires admin role
-- **Token Storage**: Stored in localStorage
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### Demo Credentials
-```
-Admin Email: admin@cakesman.com
-Admin Password: admin123
-```
+### `npm run build` fails to minify
 
-## 📱 Available Pages
-
-### Public Pages
-- `/` - Homepage
-- `/category/:categoryId` - Category products
-- `/login` - Login/Register page
-
-### Protected Pages (Requires Authentication)
-- `/admin` - Admin dashboard (Admin only)
-- `/checkout` - Checkout page (Customers)
-
-## 🎨 Design System
-
-### Colors
-- **Primary Pink**: #EC4899
-- **Dark Amber**: #92400E
-- **Cream**: #FEF3C7
-- **White**: #FFFFFF
-
-### Typography
-- **Headings**: 48px (desktop), 36px (mobile)
-- **Body**: 16px
-- **Small**: 14px
-
-## 🔗 API Endpoints
-
-### Authentication
-- `POST /api/auth/register` - Register new customer
-- `POST /api/auth/login` - Login user
-- `POST /api/auth/logout` - Logout user
-
-### Products
-- `GET /api/products` - Get all products
-- `GET /api/products/:id` - Get product by ID
-- `POST /api/products` - Create product (Admin only)
-- `PUT /api/products/:id` - Update product (Admin only)
-- `DELETE /api/products/:id` - Delete product (Admin only)
-
-### Orders
-- `GET /api/orders` - Get user's orders
-- `POST /api/orders` - Create order
-- `GET /api/orders/:id` - Get order details
-- `PUT /api/orders/:id` - Update order status (Admin only)
-
-### Cart
-- `GET /api/cart` - Get user's cart
-- `POST /api/cart` - Add to cart
-- `PUT /api/cart/:itemId` - Update cart item
-- `DELETE /api/cart/:itemId` - Remove from cart
-
-## 🧪 Testing
-
-```bash
-# Frontend
-cd frontend
-npm test
-
-# Backend
-cd backend
-npm test
-```
-
-## 📦 Deployment
-
-### Frontend (Vercel/Netlify)
-```bash
-cd frontend
-npm run build
-```
-
-### Backend (Heroku/Railway)
-```bash
-cd backend
-npm start
-```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 👨‍💻 Author
-
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
-
-## 🙏 Acknowledgments
-
-- [React](https://react.dev)
-- [Express.js](https://expressjs.com)
-- [MongoDB](https://www.mongodb.com)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Lucide Icons](https://lucide.dev)
-
-## 📧 Support
-
-For support, email support@cakesman.com or open an issue on GitHub.
-
----
-
-**Made with ❤️ for cake lovers everywhere** 🧁
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
